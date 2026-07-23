@@ -2,7 +2,9 @@
   "scripts": {
     "start": "concurrently \"npm run start-react\" \"npm run start-backend\"",
     "start-react": "react-scripts start",
-    "start-backend": "node backend/server.js"
+    "start-backend": "node backend/server.js",
+    "deploy": "npx react-scripts build && wrangler deploy",
+    "preview": "npx react-scripts build && wrangler dev"
   },
   "dependencies": {
     "concurrently": "^9.0.1",
@@ -27,5 +29,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "wrangler": "^4.113.0"
   }
 }
