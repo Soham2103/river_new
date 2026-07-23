@@ -5,7 +5,13 @@ const app = express();
 app.get("/", (req, res) => {
   res.json({
     success: true,
-    message: "Backend is working!"
+    message: "Railway backend is working!"
+  });
+});
+
+app.get("/health", (req, res) => {
+  res.json({
+    status: "OK"
   });
 });
 
